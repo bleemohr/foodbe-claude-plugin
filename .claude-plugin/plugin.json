@@ -1,0 +1,13 @@
+{
+  "name": "foodbe",
+  "version": "1.0.0",
+  "description": "Foodbe food facts for Claude: list analysis, cited answers, ingredient profiles, comparisons, recipes, meal plans and grocery lists, from human-approved data.",
+  "author": {
+    "name": "Foodbe",
+    "url": "https://www.foodbe.ai/"
+  },
+  "homepage": "https://www.foodbe.ai/developers/docs",
+  "repository": "https://github.com/bleemohr/foodbe-claude-plugin",
+  "license": "MIT",
+  "keywords": ["food", "nutrition", "allergens", "diets", "recipes", "grocery"]
+}
