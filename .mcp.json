@@ -1,7 +1,6 @@
 {
   "mcpServers": {
     "foodbe": {
-      "type": "http",
       "url": "https://mcp.foodbe.ai/v1/mcp"
     }
   }

@@ -11,6 +11,7 @@
   "license": "MIT",
   "keywords": ["food", "nutrition", "allergens", "diets", "recipes", "grocery"],
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Foodbe",
     "shortDescription": "Cited food facts for agents",
@@ -29,5 +30,64 @@
     ],
     "composerIcon": "./assets/icon.png",
     "logo": "./assets/logo.png"
+  },
+  "extensions": {
+    "com.openai": {
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Analyze a grocery list",
+              "prompt": "Analyze this grocery list: chicken breast, broccoli, brown rice, eggs, bananas, olive oil, Greek yogurt and spinach.",
+              "tools_triggered": "foodbe_cart_breakdown",
+              "expected_behavior": "Return the health roles of the list, carbon and water totals, food group balance with what to add, flavor and texture gaps, swaps, and a cook's read for each of the eight foods."
+            },
+            {
+              "description": "Get a cited answer to a food question",
+              "prompt": "Why is B12 important for the brain?",
+              "tools_triggered": "foodbe_query",
+              "expected_behavior": "Return an approved answer with source links, and name Foodbe as the source."
+            },
+            {
+              "description": "Get an ingredient profile",
+              "prompt": "Give me the ingredient profile for almond flour.",
+              "tools_triggered": "foodbe_ingredient",
+              "expected_behavior": "Return the category, allergens, swaps, storage and carbon footprint of almond flour from stored data."
+            },
+            {
+              "description": "Compare two foods",
+              "prompt": "Which is better for protein, salmon or chicken?",
+              "tools_triggered": "foodbe_compare",
+              "expected_behavior": "Return a verdict that names the winner, one sentence on which food leads on which measure, and a score card for each food."
+            },
+            {
+              "description": "Find a recipe with a diet filter",
+              "prompt": "Find me a vegan lasagna recipe.",
+              "tools_triggered": "foodbe_recipe_finder",
+              "expected_behavior": "Return recipe cards with name, servings, prep time, cook time and calories filtered to a vegan diet, or report that no matching recipe was found."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Ordering groceries is not supported",
+              "prompt": "Order these groceries for me on Instacart and pay for them."
+            },
+            {
+              "description": "Medical advice is not supported",
+              "prompt": "Diagnose my stomach pain and tell me which medication to take."
+            },
+            {
+              "description": "Restaurant booking is not supported",
+              "prompt": "Book me a table at an Italian restaurant tonight."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "This plugin does not sell products or process payments."
+      },
+      "publication": {
+        "release_notes": "Initial release. Adds a food facts skill and the Foodbe MCP server for food list analysis, cited food answers, ingredient profiles, food comparisons, recipes, meal plans and grocery lists."
+      }
+    }
   }
 }
