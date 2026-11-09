@@ -1,0 +1,33 @@
+{
+  "name": "foodbe",
+  "version": "1.0.0",
+  "description": "Food facts for agents: list analysis, cited answers, ingredient profiles, comparisons, recipes, meal plans and grocery lists, from human-approved data.",
+  "author": {
+    "name": "Foodbe",
+    "url": "https://www.foodbe.ai/"
+  },
+  "homepage": "https://www.foodbe.ai/developers/docs",
+  "repository": "https://github.com/bleemohr/foodbe-claude-plugin",
+  "license": "MIT",
+  "keywords": ["food", "nutrition", "allergens", "diets", "recipes", "grocery"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Foodbe",
+    "shortDescription": "Cited food facts for agents",
+    "longDescription": "Food decisions need more than product, price and label data. Foodbe gives food agents the facts behind a food choice: what ingredients do, how foods behave when cooked, flavor and texture, diet fit, seasonality, food science, culture and history, and environmental impact.\n\nThe list analyzer takes up to 50 food items, a food list or a purchase. One call returns what the list does for health, the carbon and water total, the food group balance and what to add, the diets it suits, the flavor and texture gaps, swaps that keep flavor and texture, and a cook's read for each food.\n\nAgents can also ask a food question and get a cited answer, compare two foods, build grocery lists, meal plans and recipes, and get ingredient profiles.\n\nEvery line comes from stored data that a human approved, never from a model. Every answer we cite comes with its source. If no approved answer exists, Foodbe says so instead of guessing.",
+    "developerName": "Foodbe",
+    "category": "Other",
+    "capabilities": ["Read"],
+    "websiteURL": "https://www.foodbe.ai/",
+    "supportURL": "https://www.foodbe.ai/support",
+    "privacyPolicyURL": "https://www.foodbe.ai/privacy-policy",
+    "termsOfServiceURL": "https://www.foodbe.ai/terms-of-service",
+    "defaultPrompt": [
+      "Analyze this grocery list: chicken breast, broccoli, brown rice, eggs, bananas and spinach.",
+      "What can replace eggs without changing the taste or texture?",
+      "Which is better for protein, salmon or chicken?"
+    ],
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png"
+  }
+}
