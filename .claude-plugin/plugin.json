@@ -9,5 +9,9 @@
   "homepage": "https://www.foodbe.ai/developers/docs",
   "repository": "https://github.com/bleemohr/foodbe-claude-plugin",
   "license": "MIT",
-  "keywords": ["food", "nutrition", "allergens", "diets", "recipes", "grocery"]
+  "keywords": ["food", "nutrition", "allergens", "diets", "recipes", "grocery"],
+  "privacyPolicyUrl": "https://www.foodbe.ai/privacy-policy",
+  "termsOfServiceUrl": "https://www.foodbe.ai/terms-of-service",
+  "supportUrl": "https://www.foodbe.ai/support",
+  "documentationUrl": "https://www.foodbe.ai/developers/docs"
 }
